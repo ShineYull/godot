@@ -424,6 +424,12 @@ else:  # Release
 env_base["optimize"] = ARGUMENTS.get("optimize", opt_level)
 env_base["debug_symbols"] = methods.get_cmdline_bool("debug_symbols", env_base.dev_build)
 
+
+# 获取宏定义 define
+if ARGUMENTS.get("define", ARGUMENTS.get("p", False)) == "DEBUG_INIT":
+    env_base.Append(CPPDEFINES=["DEBUG_INIT"])
+
+
 if env_base.editor_build:
     env_base.Append(CPPDEFINES=["TOOLS_ENABLED"])
 
