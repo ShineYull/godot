@@ -1,0 +1,23 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Project",
+            "type": "lldb",
+            "request": "launch",
+            // Change to godot.linuxbsd.editor.dev.x86_64.llvm for llvm-based builds.
+            "program": "${workspaceFolder}/bin/godot.macos.editor.dev.x86_64",
+            // Change the arguments below for the project you want to test with.
+            // To run the project instead of editing it, remove the "--editor" argument.
+            "args": [ "--editor", "--path", "${workspaceFolder}" ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "build"
+        }
+    ]
+}
