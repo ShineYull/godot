@@ -2529,6 +2529,7 @@ Error Main::setup2() {
 		if (boot_logo_image) {
 			if (!boot_logo_path.is_empty()) {
 				boot_logo.instantiate();
+				MAIN_PRINT(boot_logo_path);
 				Error load_err = ImageLoader::load_image(boot_logo_path, boot_logo);
 				if (load_err) {
 					ERR_PRINT("Non-existing or invalid boot splash at '" + boot_logo_path + "'. Loading default splash.");
